@@ -1,8 +1,0 @@
-<ion-view view-title="Search">
-  <h1>Jobs</h1>
-  <td-cards>
-    <td-card ng-repeat="card in cards track by $index" on-destroy="cardDestroyed($index)" on-swipe="cardSwiped($index)">
-      <img ng-src="{{card.src}}" />
-    </td-card>
-  </td-cards>
-</ion-view>

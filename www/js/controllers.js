@@ -3,16 +3,31 @@ angular.module('starter.controllers', [])
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, $state) {
 
   $scope.cards = [
-    {src:'img/ionic.png'},
-    {src:'img/ionic.png'}
+    {src:'img/logos/bistro.jpg'},
+    {src:'img/logos/bushido.jpg'},
+    {src:'img/logos/chickenrocks.jpg'},
+    {src:'img/logos/cleaning.jpg'},
+    {src:'img/logos/expresso.jpg'},
+    {src:'img/logos/fornodolce.jpg'},
+    {src:'img/logos/knoll.jpg'},
+    {src:'img/logos/maxim.jpg'},
+    {src:'img/logos/mopghost.jpg'},
+    {src:'img/logos/spar.jpg'},
+    {src:'img/logos/starbucks.jpg'},
+    {src:'img/logos/sushi.jpg'},
+    {src:'img/logos/tacotime.jpg'},
+    {src:'img/logos/theeatery.jpg'},
+    {src:'img/logos/vipgourmet.jpg'}
   ];
 
   $scope.cardDestroyed = function(index) {
+    console.log(index)
     $scope.cards.splice(index, 1);
   };
 
   $scope.cardSwiped = function(index) {
-    var newCard = $scope.cards.push({src:'img/ionic.png'});
+    console.log(index)
+    //var newCard = $scope.cards.push({src:'img/ionic.png'});
   };
 
   // With the new view caching in Ionic, Controllers are only called
@@ -22,25 +37,6 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  // Form data for the login modal
-  $scope.loginData = {};
-
-  // Create the login modal that we will use later
-  $ionicModal.fromTemplateUrl('templates/login.html', {
-    scope: $scope
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
-
-  // Triggered in the login modal to close it
-  $scope.closeLogin = function() {
-    $scope.modal.hide();
-  };
-
-  // Open the login modal
-  $scope.login = function() {
-    $scope.modal.show();
-  };
 
   // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
@@ -49,8 +45,8 @@ angular.module('starter.controllers', [])
     // Simulate a login delay. Remove this and replace with your login
     // code if using a login system
     $timeout(function() {
-      $state.go('app.search');
-    }, 1000);
+      $state.go('app.jobs');
+    }, 500);
   };
 })
 
