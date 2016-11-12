@@ -34,13 +34,17 @@ td-card.card-2 {
 }
 */
 
+td-card {
+  background-color: #ffffff;
+}
+
 td-card .image {
   position: relative;
 }
 
 td-card img {
   max-width: 100%;
-  border-radius: 6px;
+  border-radius: 50%;
 }
 
 .yes-text {

@@ -1,0 +1,25 @@
+<ion-view view-title="Jobs">
+  <h1>Jobs</h1>
+  <td-cards>
+    <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe="cardSwiped($index)">
+
+      <div class="job-header">
+
+        <div class="logo">
+          <img class="image" ng-src="{{card.src}}" />
+        </div>
+
+        <div class="job-summary">
+
+        </div>
+
+      </div>
+
+      <div class="job-body">
+
+      </div>
+
+
+    </td-card>
+  </td-cards>
+</ion-view>
