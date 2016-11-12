@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $state) {
 
   $scope.cards = [
     {src:'img/ionic.png'},
@@ -12,7 +12,7 @@ angular.module('starter.controllers', [])
   };
 
   $scope.cardSwiped = function(index) {
-    var newCard = $scope.cards.push(newCard);
+    var newCard = $scope.cards.push({src:'img/ionic.png'});
   };
 
   // With the new view caching in Ionic, Controllers are only called
@@ -49,21 +49,23 @@ angular.module('starter.controllers', [])
     // Simulate a login delay. Remove this and replace with your login
     // code if using a login system
     $timeout(function() {
-      $scope.closeLogin();
+      $state.go('app.search');
     }, 1000);
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
+.controller('LoginCtrl', function($scope, $stateParams, $ionicHistory) {
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+  $ionicHistory.nextViewOptions({
+    disableBack: true
+  });
+
+}).controller('SettingsCtrl', function($scope, $stateParams) {
+
+
+
+}).controller('ProfileCtrl', function($scope, $stateParams) {
+
+
+
 });
