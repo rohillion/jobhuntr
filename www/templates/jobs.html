@@ -11,8 +11,9 @@
   <div ng-if="loading" id='pulse1'></div>
   <div ng-if="loading" id='pulse2'></div>
 
-  <td-cards ng-hide="loading">
-    <td-card ng-click="showDetails(card.id)" ng-repeat="card in cards" on-snap-back="onSnapBack()" on-partial-swipe="cardPartialSwipe(amt, $index)" on-destroy="cardDestroyed($index)">
+  <ion-content>
+    <td-cards ng-hide="loading">
+    <td-card ng-click="showDetails(card.id)" ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe="cardSwiped($index)">
 
       <div class="ui card">
 
@@ -41,4 +42,5 @@
 
     </td-card>
   </td-cards>
+</ion-content>
 </ion-view>

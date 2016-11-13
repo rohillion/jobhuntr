@@ -1,6 +1,10 @@
-[nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+[nav-bar-transition="ios"] [nav-bar="active"] .bar,
+[nav-bar-transition="ios"] [nav-bar="entering"] .bar,
+[nav-bar-transition="android"] [nav-bar="active"] .bar,
+[nav-bar-transition="android"] [nav-bar="entering"] .bar {
   background: #ff3c46;
 }
+
 .bar.bar-stable .title, .bar-stable .button.button-clear {
   color: #fff;
 }
@@ -16,6 +20,14 @@
   background-size: 24px 24px;
   background-repeat: no-repeat;
   border: none;
+}
+
+.appliedimage {
+  width:100px;
+}
+
+.appliedtable td {
+    vertical-align:middle;
 }
 
 .button.applied.activated{
@@ -1138,5 +1150,3 @@ a.ui.card:hover,
 /*******************************
     User Variable Overrides
 *******************************/
-
-

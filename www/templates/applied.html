@@ -1,13 +1,11 @@
 <ion-view view-title="Jobs Applied">
   <ion-content>
-    <div class="list">
 
-      <a class="item item-thumbnail-left" href="#">
-        <img src="img/ionic.png">
-        <h2>Pretty Hate Machine</h2>
-        <p>Nine Inch Nails</p>
-      </a>
+    <table class="appliedtable">
+    <tr ng-repeat="(key, card) in selected">
+      <td><img class="appliedimage" ng-src="{{card.src}}"/></td><td>{{key}}</td><td>{{card.name}}</td>
 
-    </div>
+    </tr>
+  </table>
   </ion-content>
 </ion-view>
