@@ -38,6 +38,16 @@ angular.module('starter.controllers', [])
     $state.go('app.details',card_id);
   }
 
+  $scope.users = [
+    {
+      id:1,
+      src:'img/alex.jpg',
+      name: 'Alex',
+      phone: '087 1234567',
+      email: 'alex@gmail.com'
+    }
+  ];
+
   $scope.selected = [];
 
   $scope.cards = [
@@ -169,7 +179,7 @@ angular.module('starter.controllers', [])
 
 }).controller('ProfileCtrl', function($scope, $stateParams) {
 
-
+  user = $scope.users[0];
 
 }).controller('AppliedCtrl', function($scope, $stateParams) {
 
