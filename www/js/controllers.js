@@ -7,7 +7,7 @@ angular.module('starter.controllers', [])
   $scope.inMotion = false;
 
   $scope.onSnapBack = function() {
-    //$scope.inMotion = false;
+    $scope.inMotion = false;
   };
 
   $scope.cardPartialSwipe = function(amt, index) {
