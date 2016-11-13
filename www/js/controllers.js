@@ -11,6 +11,7 @@ angular.module('starter.controllers', [])
   };
 
   $scope.cardPartialSwipe = function(amt, index) {
+    console.log(index)
     $scope.orientation = amt;
     $scope.inMotion = true;
   };
@@ -37,7 +38,7 @@ angular.module('starter.controllers', [])
     $state.go('app.details',card_id);
   }
 
-  $scope.selected = [ ];
+  $scope.selected = [];
 
   $scope.cards = [
     {
