@@ -30,6 +30,9 @@
     vertical-align:middle;
 }
 
+.profilepicture {
+    width:250px;
+}
 .button.applied.activated{
   border:none;
   background: none;
