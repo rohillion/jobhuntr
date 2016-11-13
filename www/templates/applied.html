@@ -1,11 +1,19 @@
 <ion-view view-title="Jobs Applied">
   <ion-content>
 
-    <table class="appliedtable">
-    <tr ng-repeat="(key, card) in selected">
-      <td><img class="appliedimage" ng-src="{{card.src}}"/></td><td>{{key}}</td><td>{{card.name}}</td>
+    <div class="list">
 
-    </tr>
-  </table>
+      <a class="item item-thumbnail-left item-button-right" ng-repeat="(key, card) in selected" href="#/app/details/1">
+        <img ng-src="{{card.src}}">
+        <h2 style="margin-top: 10px;">{{card.title}}</h2>
+        <p>at {{card.name}}</p>
+        <p>Position: {{card.position}}</p>
+        <button style="margin-top: 25px;" class="button">
+          <i class="icon ion-ios-close-empty"></i>
+        </button>
+      </a>
+
+    </div>
+
   </ion-content>
 </ion-view>

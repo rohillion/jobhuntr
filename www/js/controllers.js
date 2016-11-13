@@ -41,10 +41,10 @@ angular.module('starter.controllers', [])
   $scope.users = [
     {
       id:1,
-      src:'img/alex.jpg',
-      name: 'Alex',
-      phone: '087 1234567',
-      email: 'alex@gmail.com'
+      src:'img/daniel.jpg',
+      name: 'Daniel',
+      phone: '(087)1234567',
+      email: 'daniel@gmail.com'
     }
   ];
 
@@ -56,105 +56,120 @@ angular.module('starter.controllers', [])
       src:'img/logos/bistro.jpg',
       name:'Bistro',
       title:'Waitress',
-      position:'Full-Time'
+      position:'Full-Time',
+      rate:'€9,50/h'
     },
     {
       id:'2',
       src:'img/logos/bushido.jpg',
       name:'Bushido',
       title:'Kitchen Porter',
-      position:'Part-Time'
+      position:'Part-Time',
+      rate:'€9,50/h'
     },
     {
       src:'img/logos/chickenrocks.jpg',
       id:'2',
       name:'Chicken Rocks!',
       title:'Cashier',
-      position:'Full-Time'
-    },
-    {
-      src:'img/logos/cleaning.jpg',
-      id:'2',
-      name:'Cleaning',
-      title:'Cleaner',
-      position:'Part-Time'
-    },
-    {
-      src:'img/logos/expresso.jpg',
-      id:'2',
-      name:'Expresso',
-      title:'Barista',
-      position:'Part-Time'
-    },
-    {
-      src:'img/logos/fornodolce.jpg',
-      id:'2',
-      name:'Forno Dolce',
-      title:'Cook',
-      position:'Part-Time'
-    },
-    {
-      src:'img/logos/knoll.jpg',
-      id:'2',
-      name:'Knoll',
-      title:'Receptionist',
-      position:'Part-Time'
-    },
-    {
-      src:'img/logos/maxim.jpg',
-      id:'2',
-      name:'Maxim',
-      title:'Waitress',
-      position:'Part-Time'
-    },
-    {
-      src:'img/logos/mopghost.jpg',
-      id:'2',
-      name:'Mop Ghost',
-      title:'Receptionist',
-      position:'Full-Time'
-    },
-    {
-      src:'img/logos/spar.jpg',
-      id:'2',
-      name:'Spar',
-      title:'Dely',
-      position:'Part-Time'
+      position:'Full-Time',
+      rate:'€9,50/h'
     },
     {
       src:'img/logos/starbucks.jpg',
       id:'2',
       name:'Starbucks',
       title:'Barista',
-      position:'Full-Time'
+      position:'Full-Time',
+      rate:'€9,50/h'
+    },
+    {
+      src:'img/logos/cleaning.jpg',
+      id:'2',
+      name:'Cleaning',
+      title:'Cleaner',
+      position:'Part-Time',
+      rate:'€9,50/h'
+    },
+    {
+      src:'img/logos/expresso.jpg',
+      id:'2',
+      name:'Expresso',
+      title:'Barista',
+      position:'Part-Time',
+      rate:'€9,50/h'
+    },
+    {
+      src:'img/logos/fornodolce.jpg',
+      id:'2',
+      name:'Forno Dolce',
+      title:'Cook',
+      position:'Part-Time',
+      rate:'€9,50/h'
+    },
+    {
+      src:'img/logos/knoll.jpg',
+      id:'2',
+      name:'Knoll',
+      title:'Receptionist',
+      position:'Part-Time',
+      rate:'€9,50/h'
+    },
+    {
+      src:'img/logos/maxim.jpg',
+      id:'2',
+      name:'Maxim',
+      title:'Waitress',
+      position:'Part-Time',
+      rate:'€9,50/h'
+    },
+    {
+      src:'img/logos/mopghost.jpg',
+      id:'2',
+      name:'Mop Ghost',
+      title:'Receptionist',
+      position:'Full-Time',
+      rate:'€9,50/h'
+    },
+    {
+      src:'img/logos/spar.jpg',
+      id:'2',
+      name:'Spar',
+      title:'Dely',
+      position:'Part-Time',
+      rate:'€9,50/h'
     },
     {
       src:'img/logos/sushi.jpg',
       id:'2',
       name:'Sushi Bar',
       title:'Cook',
-      position:'Full-Time'
+      position:'Full-Time',
+      rate:'€9,50/h'
     },
     {
       src:'img/logos/tacotime.jpg',
       id:'2',
       name:'Tacotime',
       title:'Waitress',
-      position:'Full-Time'
+      position:'Full-Time',
+      rate:'€9,50/h'
     },
     {
       src:'img/logos/theeatery.jpg',
       id:'2',
       name:'The Eatery',
       title:'Receptionist',
-      position:'Part-Time'
+      position:'Part-Time',
+      rate:'€9,50/h'
     },
     {
       src:'img/logos/vipgourmet.jpg',
       id:'2',
       name:'VipGourmet',
       title:'Kitchen Porter',
-      position:'Part-Time'
+      position:'Part-Time',
+      rate:'€9,50/h'
     }
   ];
 
@@ -187,6 +202,6 @@ angular.module('starter.controllers', [])
 
 }).controller('DetailsCtrl', function($scope, $stateParams) {
 
-
+  card = $scope.cards[$stateParams.index];
 
 });
