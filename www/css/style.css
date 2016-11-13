@@ -8,6 +8,21 @@
   background: #ff3c46;
 }
 
+.button.applied {
+  background: none;
+  width: 34px;
+  /*background-image: url("../img/checked.png");*/
+  background-position: center;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.button.applied.activated{
+  border:none;
+  background: none;
+}
+
 td-cards {
   display: block;
 }

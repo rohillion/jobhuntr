@@ -152,6 +152,10 @@ angular.module('starter.controllers', [])
 
 
 
+}).controller('AppliedCtrl', function($scope, $stateParams) {
+
+
+
 }).controller('DetailsCtrl', function($scope, $stateParams) {
 
 

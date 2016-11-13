@@ -70,6 +70,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic.contrib.ui.tin
       }
     })
 
+    .state('app.applied', {
+      url: '/applied',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/applied.html',
+          controller: 'AppliedCtrl'
+        }
+      }
+    })
+
   .state('app.settings', {
     url: '/settings/:userId',
     views: {
