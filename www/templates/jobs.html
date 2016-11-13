@@ -12,9 +12,13 @@
   <div ng-if="loading" id='pulse2'></div>
 
   <td-cards ng-hide="loading">
-    <td-card ng-click="showDetails(card.id)" ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe="cardSwiped($index)">
+    <td-card ng-click="showDetails(card.id)" ng-repeat="card in cards" on-snap-back="onSnapBack()" on-partial-swipe="cardPartialSwipe(amt, $index)" on-destroy="cardDestroyed($index)">
 
       <div class="ui card">
+
+        <div ng-if="orientation > 0 && $index === 0 && inMotion" class="apply-tag">Apply!</div>
+        <div ng-if="orientation < 0 && $index === 0 && inMotion" class="skip-tag">Skip!</div>
+
         <div class="image">
           <img ng-src="{{card.src}}"/>
         </div>

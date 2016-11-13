@@ -2,7 +2,38 @@ angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, $state) {
 
+  $scope.orientation;
   $scope.loading = true;
+  $scope.inMotion = false;
+
+  $scope.onSnapBack = function() {
+    //$scope.inMotion = false;
+  };
+
+  $scope.cardPartialSwipe = function(amt, index) {
+    $scope.orientation = amt;
+    $scope.inMotion = true;
+  };
+
+  $scope.cardDestroyed = function(index) {
+    $scope.cards.splice(index, 1);
+    $scope.inMotion = false;
+    if($scope.orientation < 0)
+    {
+      console.log('Skip');
+    }
+    else {
+      console.log('Apply!');
+    }
+  };
+
+  $scope.toggleRadar = function(){
+    $scope.loading = false;
+  }
+
+  $scope.showDetails = function(card_id){
+    $state.go('app.details',card_id);
+  }
 
   $scope.cards = [
     {
@@ -112,29 +143,12 @@ angular.module('starter.controllers', [])
     }
   ];
 
-  $scope.cardDestroyed = function(index) {
-    $scope.cards.splice(index, 1);
-  };
-
-  $scope.cardSwiped = function(index) {
-    console.log(index)
-    //var newCard = $scope.cards.push({src:'img/ionic.png'});
-  };
-
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
   // listen for the $ionicView.enter event:
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-
-  $scope.toggleRadar = function(){
-    $scope.loading = false;
-  }
-
-  $scope.showDetails = function(card_id){
-    $state.go('app.details',card_id);
-  }
 
 })
 
