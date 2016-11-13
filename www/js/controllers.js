@@ -16,15 +16,17 @@ angular.module('starter.controllers', [])
   };
 
   $scope.cardDestroyed = function(index) {
-    $scope.cards.splice(index, 1);
-    $scope.inMotion = false;
     if($scope.orientation < 0)
     {
       console.log('Skip');
     }
     else {
+      $scope.selected.push($scope.cards[index]);
       console.log('Apply!');
     }
+
+    $scope.cards.splice(index, 1);
+    $scope.inMotion = false;
   };
 
   $scope.toggleRadar = function(){
@@ -34,6 +36,8 @@ angular.module('starter.controllers', [])
   $scope.showDetails = function(card_id){
     $state.go('app.details',card_id);
   }
+
+  $scope.selected = [ ];
 
   $scope.cards = [
     {
