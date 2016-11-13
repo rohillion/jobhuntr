@@ -1,24 +1,36 @@
 <ion-view view-title="Jobs">
   <h1>Jobs</h1>
-  <td-cards>
-    <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe="cardSwiped($index)">
 
-      <div class="job-header">
+  <div ng-show="loading" id="avatar" ng-click="toggleRadar()">
+    <img ng-src="img/daniel.jpg" />
+  </div>
 
-        <div class="logo">
-          <img class="image" ng-src="{{card.src}}" />
+  <div ng-if="loading" id='pulse1'></div>
+  <div ng-if="loading" id='pulse2'></div>
+
+  <td-cards ng-hide="loading">
+    <td-card ng-click="showDetails(card.id)" ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe="cardSwiped($index)">
+
+      <div class="ui card">
+        <div class="image">
+          <img ng-src="{{card.src}}"/>
         </div>
-
-        <div class="job-summary">
-
+        <div class="content">
+          <a class="header">{{card.title}}</a>
+          <div class="meta">
+            <span class="date">at {{card.name}}</span>
+          </div>
+          <div class="description">
+            Kristy is an art director living in New York.
+          </div>
         </div>
-
+        <div class="extra content">
+          <a>
+            <i class="user icon"></i>
+            {{card.position}}
+          </a>
+        </div>
       </div>
-
-      <div class="job-body">
-
-      </div>
-
 
     </td-card>
   </td-cards>

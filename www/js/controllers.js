@@ -2,26 +2,117 @@ angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, $state) {
 
+  $scope.loading = true;
+
   $scope.cards = [
-    {src:'img/logos/bistro.jpg'},
-    {src:'img/logos/bushido.jpg'},
-    {src:'img/logos/chickenrocks.jpg'},
-    {src:'img/logos/cleaning.jpg'},
-    {src:'img/logos/expresso.jpg'},
-    {src:'img/logos/fornodolce.jpg'},
-    {src:'img/logos/knoll.jpg'},
-    {src:'img/logos/maxim.jpg'},
-    {src:'img/logos/mopghost.jpg'},
-    {src:'img/logos/spar.jpg'},
-    {src:'img/logos/starbucks.jpg'},
-    {src:'img/logos/sushi.jpg'},
-    {src:'img/logos/tacotime.jpg'},
-    {src:'img/logos/theeatery.jpg'},
-    {src:'img/logos/vipgourmet.jpg'}
+    {
+      id:'1',
+      src:'img/logos/bistro.jpg',
+      name:'Bistro',
+      title:'Waitress',
+      position:'Full-Time'
+    },
+    {
+      id:'2',
+      src:'img/logos/bushido.jpg',
+      name:'Bushido',
+      title:'Kitchen Porter',
+      position:'Part-Time'
+    },
+    {
+      src:'img/logos/chickenrocks.jpg',
+      id:'2',
+      name:'Chicken Rocks!',
+      title:'Cashier',
+      position:'Full-Time'
+    },
+    {
+      src:'img/logos/cleaning.jpg',
+      id:'2',
+      name:'Cleaning',
+      title:'Cleaner',
+      position:'Part-Time'
+    },
+    {
+      src:'img/logos/expresso.jpg',
+      id:'2',
+      name:'Expresso',
+      title:'Barista',
+      position:'Part-Time'
+    },
+    {
+      src:'img/logos/fornodolce.jpg',
+      id:'2',
+      name:'Forno Dolce',
+      title:'Cook',
+      position:'Part-Time'
+    },
+    {
+      src:'img/logos/knoll.jpg',
+      id:'2',
+      name:'Knoll',
+      title:'Receptionist',
+      position:'Part-Time'
+    },
+    {
+      src:'img/logos/maxim.jpg',
+      id:'2',
+      name:'Maxim',
+      title:'Waitress',
+      position:'Part-Time'
+    },
+    {
+      src:'img/logos/mopghost.jpg',
+      id:'2',
+      name:'Mop Ghost',
+      title:'Receptionist',
+      position:'Full-Time'
+    },
+    {
+      src:'img/logos/spar.jpg',
+      id:'2',
+      name:'Spar',
+      title:'Dely',
+      position:'Part-Time'
+    },
+    {
+      src:'img/logos/starbucks.jpg',
+      id:'2',
+      name:'Starbucks',
+      title:'Barista',
+      position:'Full-Time'
+    },
+    {
+      src:'img/logos/sushi.jpg',
+      id:'2',
+      name:'Sushi Bar',
+      title:'Cook',
+      position:'Full-Time'
+    },
+    {
+      src:'img/logos/tacotime.jpg',
+      id:'2',
+      name:'Tacotime',
+      title:'Waitress',
+      position:'Full-Time'
+    },
+    {
+      src:'img/logos/theeatery.jpg',
+      id:'2',
+      name:'The Eatery',
+      title:'Receptionist',
+      position:'Part-Time'
+    },
+    {
+      src:'img/logos/vipgourmet.jpg',
+      id:'2',
+      name:'VipGourmet',
+      title:'Kitchen Porter',
+      position:'Part-Time'
+    }
   ];
 
   $scope.cardDestroyed = function(index) {
-    console.log(index)
     $scope.cards.splice(index, 1);
   };
 
@@ -37,17 +128,14 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
+  $scope.toggleRadar = function(){
+    $scope.loading = false;
+  }
 
-  // Perform the login action when the user submits the login form
-  $scope.doLogin = function() {
-    console.log('Doing login', $scope.loginData);
+  $scope.showDetails = function(card_id){
+    $state.go('app.details',card_id);
+  }
 
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    $timeout(function() {
-      $state.go('app.jobs');
-    }, 500);
-  };
 })
 
 .controller('LoginCtrl', function($scope, $stateParams, $ionicHistory) {
@@ -61,6 +149,10 @@ angular.module('starter.controllers', [])
 
 
 }).controller('ProfileCtrl', function($scope, $stateParams) {
+
+
+
+}).controller('DetailsCtrl', function($scope, $stateParams) {
 
 
 

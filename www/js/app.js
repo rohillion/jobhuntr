@@ -60,6 +60,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic.contrib.ui.tin
       }
     })
 
+    .state('app.details', {
+      url: '/details/:cardId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/details.html',
+          controller: 'DetailsCtrl'
+        }
+      }
+    })
+
   .state('app.settings', {
     url: '/settings/:userId',
     views: {
@@ -70,5 +80,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic.contrib.ui.tin
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/login');
+  $urlRouterProvider.otherwise('/app/jobs');
 });

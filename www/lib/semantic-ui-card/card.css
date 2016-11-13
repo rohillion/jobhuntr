@@ -1,114 +1,3 @@
-[nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
-  background: #ff3c46;
-}
-.bar.bar-stable .title, .bar-stable .button.button-clear {
-  color: #fff;
-}
-.menu .bar-header{
-  background: #ff3c46;
-}
-
-td-cards {
-  display: block;
-}
-
-td-card {
-  /* background-color: #ffffff; */
-  position: absolute;
-  left: 50%;
-  margin-top: 80px;
-  margin-bottom: 40px;
-  margin-left: -150px;
-  /* width: 300px; */
-  /*height: 300px;*/
-  /* border: 1px solid #999; */
-  /* box-shadow: 0px 1px 3px rgba(0,0,0,0.2); */
-  /* border-radius: 6px; */
-}
-
-td-card .image {
-  position: relative;
-}
-
-td-card img {
-  max-width: 100%;
-  border-radius: 50%;
-}
-
-.fade {
-  -webkit-transition: 0.2s opacity linear;
-  transition: 0.2s opacity linear;
-  opacity: 0;
-}
-
-#avatar {
-  border: 5px solid #ffffff;
-  overflow:hidden;
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  top: 50%; left:50%;
-  -webkit-transform:translateX(-50%) translateY(-50%);
-  transform:translateX(-50%) translateY(-50%);
-  border-radius:50%;
-  z-index: 99999;
-}
-
-#avatar img{
-  max-width: 100%;
-  max-height: 100%;
-}
-
-#pulse1, #pulse2 {
-  border-radius:50%;
-  position:absolute;
-  height: 150px; width: 150px;
-  top: 50%; left:50%;
-  /*border: 2px solid rgba(66, 152, 181, 1);*/
-  -webkit-animation: pulsate 3s infinite;
-  animation: pulsate 3s infinite;
-  background-color:#ff3c46;
-  -webkit-transform:translateX(-50%) translateY(-50%);
-  transform:translateX(-50%) translateY(-50%);
-}
-#pulse2 {
-  -webkit-animation: pulsate 3s -.5s infinite;
-  animation: pulsate 3s -.5s infinite;
-}
-@-webkit-keyframes pulsate {
-  0%,100% {
-    width:150px;
-    height:150px;
-    opacity:0;
-  }
-  1% { opacity:1; }
-  70% {
-    opacity:0.5;
-  }
-  99.999% {
-    width:300px;
-    height:300px;
-    opacity:0;
-  }
-}
-@keyframes pulsate {
-  0%,100% {
-    width:150px;
-    height:150px;
-    opacity:0;
-  }
-  1% { opacity:1; }
-  70% {
-    opacity:0.5;
-  }
-  99.999% {
-    width:300px;
-    height:300px;
-    opacity:0;
-  }
-}
-
-
 /*!
  * # Semantic UI 2.2.6 - Item
  * http://github.com/semantic-org/semantic-ui/
@@ -140,10 +29,9 @@ td-card img {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 300px;
-  /*height: 300px;*/
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 290px;
   min-height: 0px;
   background: #FFFFFF;
   padding: 0em;
@@ -181,8 +69,8 @@ td-card img {
   display: flex;
   margin: -0.875em -0.5em;
   -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 .ui.cards > .card {
   display: -webkit-box;
@@ -237,8 +125,8 @@ td-card img {
   display: block;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   padding: 0em;
   background: rgba(0, 0, 0, 0.05);
 }
@@ -262,8 +150,8 @@ td-card img {
 .ui.card > .content {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   border: none;
   border-top: 1px solid rgba(34, 36, 38, 0.1);
   background: none;
@@ -516,8 +404,8 @@ td-card img {
   min-height: 0em !important;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
   position: static;
   background: none;
@@ -572,8 +460,8 @@ a.ui.raised.card:hover,
 .ui.centered.cards {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .ui.centered.card {
   margin-left: auto;
@@ -598,7 +486,7 @@ a.ui.raised.card:hover,
 a.ui.card,
 .ui.link.card {
   -webkit-transform: none;
-  transform: none;
+          transform: none;
 }
 .ui.cards a.card:hover,
 .ui.link.cards .card:hover,
@@ -610,7 +498,7 @@ a.ui.card:hover,
   border: none;
   box-shadow: 0px 1px 3px 0px #BCBDBD, 0px 0px 0px 1px #D4D4D5;
   -webkit-transform: translateY(-3px);
-  transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 /*-------------------
@@ -1082,5 +970,4 @@ a.ui.card:hover,
 /*******************************
     User Variable Overrides
 *******************************/
-
 
