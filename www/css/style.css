@@ -61,19 +61,45 @@
 
 .details-header{
   background: #ff3c46;
+  padding: 10px;
+  text-align: center;
 }
 
 .company-logo{
-  border: 5px solid #ffffff;
-  overflow:hidden;
+  overflow: hidden;
   width: 80px;
   height: 80px;
-  position: absolute;
-  top: 50%; left:50%;
-  -webkit-transform:translateX(-50%) translateY(-50%);
-  transform:translateX(-50%) translateY(-50%);
-  border-radius:50%;
+  border-radius: 50%;
   z-index: 99999;
+  margin: auto;
+}
+.company-logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.company-name {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.job-description {
+  padding: 10px;
+}
+.sub-title {
+  text-align: center;
+  border: none;
+  margin: calc(2rem - .14285em) 0 1rem;
+  padding: 0;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-weight: 700;
+  line-height: 1.2857em;
+  text-transform: none;
+  color: rgba(0,0,0,.87);
+}
+.job-location img{
+  max-width: 100%;
 }
 
 td-cards {
